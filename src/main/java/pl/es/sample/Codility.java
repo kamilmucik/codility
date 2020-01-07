@@ -1,89 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/***
 Frog-Jmp
 
         A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.
@@ -91,6 +6,7 @@ Frog-Jmp
         Count the minimal number of jumps that the small frog must perform to reach its target.
 
         Write a function:
+
 
 class Solution { public int solution(int X, int Y, int D); }
 
@@ -114,10 +30,7 @@ that, given three integers X, Y and D, returns the minimal number of jumps from 
 
         X, Y and D are integers within the range [1..1,000,000,000];
         X ≤ Y.
-
-
-
-
+ */
 
 // you can also use imports, for example:
 
@@ -144,6 +57,7 @@ class Solution {
 }
 
 
+/***
 Perm-Missing-Elem
 
         An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
@@ -172,6 +86,7 @@ that, given an array A, returns the value of the missing element.
         N is an integer within the range [0..100,000];
         the elements of A are all distinct;
         each element of array A is an integer within the range [1..(N + 1)].
+*/
 
 
 
@@ -184,7 +99,7 @@ class Solution {
 return A.length+1;
 }
 }
-        Tape-Equilibrium
+ /**       Tape-Equilibrium
 
         A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
 
@@ -241,7 +156,7 @@ that, given a non-empty array A of N integers, returns the minimal difference th
         N is an integer within the range [2..100,000];
         each element of array A is an integer within the range [−1,000..1,000].
 
-
+*/
 class Solution {
     public int solution(int[] A) {
         int minimum = A.length*1000;
@@ -254,7 +169,7 @@ class Solution {
 return minimum;
 }
 }
-        Perm-Check
+  /**      Perm-Check
 
         A non-empty array A consisting of N integers is given.
 
@@ -310,7 +225,7 @@ that, given an array A, returns 1 if array A is a permutation and 0 if it is not
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [1..1,000,000,000].
-
+*/
 
 class Solution {
     public static int solution(int[] A) {
@@ -333,7 +248,7 @@ class Solution {
     }
 }
 
-/**
+/***
  * https://codility.com/demo/results/demoYEU94K-8FU/ 100
  */
 public class PermCheck {
@@ -364,6 +279,7 @@ public class PermCheck {
     }
 }
 
+/**
 Frog-River-One
 
         A small frog wants to get to the other side of a river. The frog is initially located on one bank of the river (position 0) and wants to get to the opposite bank (position X+1). Leaves fall from a tree onto the surface of the river.
@@ -423,6 +339,7 @@ that, given a non-empty array A consisting of N integers and integer X, returns 
         N and X are integers within the range [1..100,000];
         each element of array A is an integer within the range [1..X].
 
+*/
 
 
         import java.util.*;
@@ -440,6 +357,7 @@ class Solution {
     }
 }
 
+/**
 Max-Counters
 
         You are given N counters, initially set to 0, and you have two possible operations on them:
@@ -516,6 +434,7 @@ that, given an integer N and a non-empty array A consisting of M integers, retur
         N and M are integers within the range [1..100,000];
         each element of array A is an integer within the range [1..N + 1].
 
+*/
 
 class Solution {
     public int[] solution(int N, int[] A) {
@@ -538,6 +457,7 @@ for (int i=0; i counters[i] += absMax;
 return counters;
 }
 }
+/**
         Missing-Integer
 
         This is a demo task.
@@ -559,9 +479,7 @@ that, given an array A of N integers, returns the smallest positive integer (gre
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [−1,000,000..1,000,000].
 
-
-
-
+*/
 public int solution(int[] A) {
         HashSet positives = new HashSet<>(); // to add just positives
         int max = 1, length = A.length;
@@ -605,6 +523,7 @@ else
 }
 }
 
+/**
         Passing-Cars
 
         A non-empty array A consisting of N integers is given. The consecutive elements of array A represent consecutive cars on a road.
@@ -632,6 +551,7 @@ else
 
         Write a function:
 
+
 class Solution { public int solution(int[] A); }
 
 that, given a non-empty array A of N integers, returns the number of pairs of passing cars.
@@ -655,7 +575,7 @@ that, given a non-empty array A of N integers, returns the number of pairs of pa
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer that can have one of the following values: 0, 1.
-
+*/
 
 public int solution(int[] A) {
         int total = 0;
@@ -673,7 +593,7 @@ public int solution(int[] A) {
         return total;
         }
 
-        Genomic-Range-Query
+  /**      Genomic-Range-Query
 
         A DNA sequence can be represented as a string consisting of the letters A, C, G and T, which correspond to the types of successive nucleotides in the sequence. Each nucleotide has an impact factor, which is an integer. Nucleotides of types A, C, G and T have impact factors of 1, 2, 3 and 4, respectively. You are going to answer several queries of the form: What is the minimal impact factor of nucleotides contained in a particular part of the given DNA sequence?
 
@@ -719,7 +639,7 @@ that, given a non-empty string S consisting of N characters and two non-empty ar
         string S consists only of upper-case English letters A, C, G, T.
 
 
-
+*/
 class Solution {
     private ImpactFactorHolder[] mHolder;
     private static final int A=0,C=1,G=2,T=3;
@@ -856,7 +776,7 @@ else
 return sol;
         }
         }
-        Min-Avg-Two-Slice
+  /**      Min-Avg-Two-Slice
 
         A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P < Q < N, is called a slice of array A (notice that the slice contains at least two elements). The average of a slice (P, Q) is the sum of A[P] + A[P + 1] + ... + A[Q] divided by the length of the slice. To be precise, the average equals (A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1).
 
@@ -915,7 +835,7 @@ that, given a non-empty array A consisting of N integers, returns the starting p
 
 
 
-
+*/
 public int solution(int[] A) {
         int len = A.length, result = len - 1, sum = 0;
         int[] prefixSums = new int[len + 1];
@@ -973,6 +893,9 @@ class Solution {
         return result;
     }
 }
+
+
+/**
 Count-Div
 
         Write a function:
@@ -991,8 +914,7 @@ that, given three integers A, B and K, returns the number of integers within the
         K is an integer within the range [1..2,000,000,000];
         A ≤ B.
 
-
-
+*/
 
 public int solution(int A, int B, int K) {
         int offsetForLeftRange = 0;
@@ -1025,6 +947,7 @@ class Solution {
     }
 }
 
+/**
 Distinct
 
         Write a function
@@ -1046,6 +969,7 @@ that, given an array A consisting of N integers, returns the number of distinct 
         each element of array A is an integer within the range [−1,000,000..1,000,000].
 
 
+*/
 
 
         import java.util.Set;
@@ -1100,6 +1024,7 @@ class Solution {
         return aSet.size();
     }
 }
+/**
 Max-Product-Of-Three
 
         A non-empty array A consisting of N integers is given. The product of triplet (P, Q, R) equates to A[P] * A[Q] * A[R] (0 ≤ P < Q < R < N).
@@ -1151,9 +1076,7 @@ that, given a non-empty array A, returns the value of the maximal product of any
 
         N is an integer within the range [3..100,000];
         each element of array A is an integer within the range [−1,000..1,000].
-
-
-
+*/
 
 // you can also use imports, for example:
         import java.util.Arrays;
@@ -1241,6 +1164,7 @@ class Solution {
             return maxProduct;
         }
 
+/**
         Triangle
 
         An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
@@ -1280,13 +1204,14 @@ class Solution {
         N is an integer within the range [0..100,000];
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
+*/
 
 
 // you can also use imports, for example:
 // import java.math.*;
 import java.util.Arrays;
         class Solution {
-            /**
+            /***
              * Check whether there is a triangular
              * @param A The array for length of lines
              * @return 0: no triangular found
@@ -1302,7 +1227,7 @@ import java.util.Arrays;
                     if (A[i] >= 0 && A[i] > A[i+2] - A[i+1]) {
                         return 1;
                     }
-                    /*
+                    /**
                      * We already know A[i+1] <= A[i+2]. If A[i] < 0,
                      * A[i] + A[i+1] < A[i+2]
                      */
@@ -1339,6 +1264,7 @@ import java.util.Arrays;
                 return (P > R - Q) && (Q > P - R) && (P > Q - R);
             }
         }
+/**
         beta2010 (Number-Of-Disc-Intersections)
 
         We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
@@ -1379,13 +1305,14 @@ import java.util.Arrays;
 
 
 
+*/
 
 
 // you can also use imports, for example:
 // import java.util.*;
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
-        /* for each disc J in A w/ radius A[J], J *must* intersect with the previous A[J] discs
+        /** for each disc J in A w/ radius A[J], J *must* intersect with the previous A[J] discs
          * for disc J and K s.t. J < K, J intersects K iff J + A[J] >= K - A[K]
          * problem is when J + A[J] < K
          * need a way to know the number of discs prior to a position I that intersect w/ I
@@ -1437,6 +1364,7 @@ import java.util.Arrays;
         }
 
 
+/**
         Brackets
 
         A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
@@ -1460,9 +1388,7 @@ import java.util.Arrays;
 
         N is an integer within the range [0..200,000];
         string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
-
-
-
+*/
 
 import java.util.List;
 import java.util.ArrayList;
@@ -1530,6 +1456,7 @@ import java.util.HashMap;
                 }
             }
         }
+/**
         Nesting
 
         A string S consisting of N characters is called properly nested if:
@@ -1553,10 +1480,7 @@ import java.util.HashMap;
 
         N is an integer within the range [0..1,000,000];
         string S consists only of the characters "(" and/or ")".
-
-
-
-
+*/
         public static final int BALANCED = 1;
         public static final int UNBALANCED = 0;
         public int solution(String S) {
@@ -1577,6 +1501,7 @@ import java.util.HashMap;
             }
             return counter == 0 ? BALANCED : UNBALANCED;
         }
+/**
         sigma2012 (Stone-Wall)
 
         You are going to build a stone wall. The wall should be straight and N meters long, and its thickness should be constant; however, it should have different heights in different places. The height of the wall is specified by an array H of N positive integers. H[I] is the height of the wall from I to I+1 meters to the right of its left end. In particular, H[0] is the height of the wall's left end and H[N−1] is the height of the wall's right end.
@@ -1602,10 +1527,7 @@ import java.util.HashMap;
 
         N is an integer within the range [1..100,000];
         each element of array H is an integer within the range [1..1,000,000,000].
-
-
-
-
+*/
 import java.util.ArrayList;
 import java.util.List;
         public class StoneWall {
@@ -1655,6 +1577,7 @@ import java.util.List;
                 }
             }
         }
+/**
         Fish
 
         You are given two non-empty arrays A and B consisting of N integers. Arrays A and B represent N voracious fish in a river, ordered downstream along the flow of the river.
@@ -1702,10 +1625,7 @@ import java.util.List;
         each element of array A is an integer within the range [0..1,000,000,000];
         each element of array B is an integer that can have one of the following values: 0, 1;
         the elements of A are all distinct.
-
-
-
-
+*/
 import java.util.Stack;
         class Solution {
             private static final int UPSTREAM = 0;
@@ -1831,6 +1751,7 @@ public int solution(int[] A, int[] B) {
         }
         return surview + downStreamSize.size();
         }
+/**
         Dominator
 
         An array A consisting of N integers is given. The dominator of array A is the value that occurs in more than half of the elements of A.
@@ -1863,10 +1784,7 @@ that, given an array A consisting of N integers, returns index of any element of
 
         N is an integer within the range [0..100,000];
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
-
-
-
-
+*/
         import java.util.*;
 class Solution {
     public int solution(int[] A) {
@@ -1921,6 +1839,7 @@ public int solution(int[] A) {
         }
         return -1;
         }
+/**
         Equi-Leader
 
         A non-empty array A consisting of N integers is given.
@@ -1975,9 +1894,7 @@ that, given a non-empty array A consisting of N integers, returns the number of 
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
-
-
-
+*/
 
 class Solution {
     public int solution(int[] A) {
@@ -2136,6 +2053,7 @@ class Solution {
 }
 
 
+/**
 Max-Double-Slice-Sum
 
         A non-empty array A consisting of N integers is given.
@@ -2199,9 +2117,7 @@ that, given a non-empty array A consisting of N integers, returns the maximal su
 
         N is an integer within the range [3..100,000];
         each element of array A is an integer within the range [−10,000..10,000].
-
-
-
+*/
 
 public int solution(int[] A) {
         int[] maxStartingHere = new int[A.length];
@@ -2222,6 +2138,7 @@ public int solution(int[] A) {
         }
         return maxDoubleSlice;
         }
+/**
         Max-Profit
 
         An array A consisting of N integers is given. It contains daily prices of a stock share for a period of N consecutive days. If a single share was bought on day P and sold on day Q, where 0 ≤ P ≤ Q < N, then the profit of such transaction is equal to A[Q] − A[P], provided that A[Q] ≥ A[P]. Otherwise, the transaction brings loss of A[P] − A[Q].
@@ -2266,9 +2183,7 @@ that, given an array A consisting of N integers containing daily prices of a sto
 
         N is an integer within the range [0..400,000];
         each element of array A is an integer within the range [0..200,000].
-
-
-
+*/
 
 class Solution {
     public int solution(int[] A) {
@@ -2282,6 +2197,7 @@ class Solution {
         return profit > 0 ? profit : 0 ;
     }
 }
+/**
 Max-Slice-Sum
 
         A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called a slice of array A. The sum of a slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
@@ -2334,6 +2250,7 @@ that, given an array A consisting of N integers, returns the maximum sum of any 
 
 // you can write to stdout for debugging purposes, e.g.
 // Console.WriteLine("this is a debug message");
+*/
 
 class Solution {
     public int solution(int[] A) {
@@ -2367,6 +2284,7 @@ class Solution {
 }
 
 
+/**
 Min-Perimeter-Rectangle
 
         An integer N is given, representing the area of some rectangle.
@@ -2394,9 +2312,7 @@ that, given an integer N, returns the minimal perimeter of any rectangle whose a
         Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [1..1,000,000,000].
-
-
-
+*/
 public int solution(int N) {
         Integer x = ((Double)Math.sqrt(N)).intValue();
         int y = 0 ;
@@ -2410,6 +2326,7 @@ public int solution(int N) {
         }
 
 
+/**
         Count-Factors
 
 
@@ -2428,10 +2345,7 @@ that, given a positive integer N, returns the number of its factors.
         Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [1..2,147,483,647].
-
-
-
-
+*/
 
 class CountFactors {
     public static int solution(int N) {
@@ -2484,6 +2398,7 @@ class Solution {
         return r;
     }
 }
+/**
 Peaks
 
         A non-empty array A consisting of N integers is given.
@@ -2580,11 +2495,7 @@ that, given a non-empty array A consisting of N integers, returns the maximum nu
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [0..1,000,000,000].
-
-
-
-
-
+*/
 
         import java.util.*;
 class Solution {
@@ -2618,7 +2529,7 @@ class Solution {
 }
 
 
-C++
+//C++
         int solution(vector &A) {
 // write your code in C++14 (g++ 6.2.0)
         int N = A.size();
@@ -2664,6 +2575,7 @@ C++
         }
         return 1; // if we are here array at least has one peak.
         }
+/**
         boron2013 (Flags)
 
         A non-empty array A consisting of N integers is given.
@@ -2747,9 +2659,7 @@ that, given a non-empty array A of N integers, returns the maximum number of fla
 
         N is an integer within the range [1..400,000];
         each element of array A is an integer within the range [0..1,000,000,000].
-
-
-
+*/
 
         import java.util.*;
 class Solution {
@@ -2782,6 +2692,7 @@ class Solution {
             s--;}
         return 0;}
 }
+/**
 Count-Non-Divisible
 
         You are given an array A consisting of N integers.
@@ -2833,10 +2744,8 @@ that, given an array A consisting of N integers, returns a sequence of integers 
 
         N is an integer within the range [1..50,000];
         each element of array A is an integer within the range [1..2 * N].
-
-
-
-
+*/
+/**
         C++
 
         A non-empty array A consisting of N integers is given.
@@ -2885,6 +2794,8 @@ that, given an array A consisting of N integers, returns a sequence of integers 
 
         Write a function:
 
+*/
+/**
 class Solution { public int solution(int[] A); }
 
 that, given a non-empty array A of N integers, returns the maximum number of flags that can be set on the peaks of the array.
@@ -2969,6 +2880,7 @@ that, given an integer N and two non-empty arrays P and Q consisting of M intege
         M is an integer within the range [1..30,000];
         each element of arrays P, Q is an integer within the range [1..N];
         P[i] ≤ Q[i].
+*/
 
 
 
@@ -3020,6 +2932,7 @@ public int[] solution(int N, int[] P, int[] Q) {
         return result;
         }
 
+/**
         Chocolates-By-Numbers
 
         Two positive integers N and M are given. Integer N represents the number of chocolates arranged in a circle, numbered from 0 to N − 1.
@@ -3047,9 +2960,7 @@ that, given two positive integers N and M, returns the number of chocolates that
         Write an efficient algorithm for the following assumptions:
 
         N and M are integers within the range [1..1,000,000,000].
-
-
-
+*/
 
 class Solution {
     public int solution(int N, int M) {
@@ -3066,6 +2977,7 @@ class Solution {
         return N;
     }
 }
+/**
 Common-Prime-Divisors
 
         A prime is a positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers are 2, 3, 5, 7, 11 and 13.
@@ -3102,6 +3014,7 @@ that, given two non-empty arrays A and B of Z integers, returns the number of po
         each element of arrays A, B is an integer within the range [1..2,147,483,647].
 
 
+*/
 
 
 
@@ -3171,6 +3084,7 @@ static int gcd(int a, int b)
         if hasSamePrimeDivisors(x,y):
         count += 1
         return count
+/**
         Fib-Frog
 
         The Fibonacci sequence is defined using the following recursive formula:
@@ -3251,6 +3165,7 @@ that, given an array A consisting of N integers, returns the minimum number of j
         N is an integer within the range [0..100,000];
         each element of array A is an integer that can have one of the following values: 0, 1.
 
+*/
 
 
 
@@ -3286,6 +3201,7 @@ class Solution {
     }
 }
 
+/**
 Ladder
 
         You have to climb up a ladder. The ladder has exactly N rungs, numbered from 1 to N. With each step, you can ascend by one or two rungs. More precisely:
@@ -3344,10 +3260,7 @@ that, given two non-empty arrays A and B of L integers, returns an array consist
         L is an integer within the range [1..50,000];
         each element of array A is an integer within the range [1..L];
         each element of array B is an integer within the range [1..30].
-
-
-
-
+*/
 
         import java.util.LinkedList;
         import java.lang.Math;
@@ -3421,6 +3334,7 @@ class Solution {
     }
 }
 
+/**
 Min-Max-Division
 
         You are given integers K, M and a non-empty array A consisting of N integers. Every element of the array is not greater than M.
@@ -3484,9 +3398,7 @@ that, given integers K, M and a non-empty array A consisting of N integers, retu
         N and K are integers within the range [1..100,000];
         M is an integer within the range [0..10,000];
         each element of array A is an integer within the range [0..M].
-
-
-
+*/
 
 class Solution {
     public int solution(int K, int M, int[] A) {
@@ -3514,6 +3426,7 @@ class Solution {
         return i==A.length;
     }
 }
+/**
 Nailing-Planks
 
         You are given two non-empty arrays A and B consisting of N integers. These arrays represent N planks. More precisely, A[K] is the start and B[K] the end of the K−th plank.
@@ -3592,10 +3505,7 @@ that, given two non-empty arrays A and B consisting of N integers and a non-empt
         N and M are integers within the range [1..30,000];
         each element of arrays A, B, C is an integer within the range [1..2*M];
         A[K] ≤ B[K].
-
-
-
-
+*/
 
         C++
         #include
@@ -3657,6 +3567,7 @@ that, given two non-empty arrays A and B consisting of N integers and a non-empt
         }
         return jmin+1;
         }
+/**
         Count-Triangles
 
         An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if it is possible to build a triangle with sides of lengths A[P], A[Q] and A[R]. In other words, triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
@@ -3690,9 +3601,7 @@ that, given an array A consisting of N integers, returns the number of triangula
 
         N is an integer within the range [0..1,000];
         each element of array A is an integer within the range [1..1,000,000,000].
-
-
-
+*/
 
         Python
         #include
@@ -3769,6 +3678,7 @@ that, given an array A consisting of N integers, returns the number of triangula
         }
         return cnt;
         }
+/**
         Abs-Distinct
 
         A non-empty array A consisting of N numbers is given. The array is sorted in non-decreasing order. The absolute distinct count of this array is the number of distinct absolute values among the elements of the array.
@@ -3814,9 +3724,7 @@ that, given a non-empty array A consisting of N numbers, returns absolute distin
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647];
         array A is sorted in non-decreasing order.
-
-
-
+*/
 
         import java.util.Arrays;
 public class AbsDistinct {
@@ -3859,6 +3767,7 @@ class Solution {
         return B.Length;
     }
 }
+/**
 Count-Distinct-Slices
 
         An integer M and a non-empty array A consisting of N non-negative integers are given. All integers in array A are less than or equal to M.
@@ -3907,6 +3816,7 @@ that, given an integer M and a non-empty array A consisting of N integers, retur
         M is an integer within the range [0..100,000];
         each element of array A is an integer within the range [0..M].
 
+*/
 
 
 
@@ -3933,6 +3843,7 @@ that, given an integer M and a non-empty array A consisting of N integers, retur
         return res;
         }
 
+/**
         Min-Abs-Sum-Of-Two
 
         Let A be a non-empty array consisting of N integers.
@@ -3992,9 +3903,7 @@ that, given a non-empty array A consisting of N integers, returns the minimal ab
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
-
-
-
+*/
 
 public int solution(int[] A) {
 // write your code in Java SE 8
@@ -4018,6 +3927,7 @@ public int solution(int[] A) {
         }
         return Math.min(Math.abs(sum2),result1);
         }
+/**
         Tie-Ropes
 
         There are N ropes numbered from 0 to N − 1, whose lengths are given in an array A, lying on the floor in a line. For each I (0 ≤ I < N), the length of rope I on the line is A[I].
@@ -4080,8 +3990,7 @@ that, given an integer K and a non-empty array A of N integers, returns the maxi
         K is an integer within the range [1..1,000,000,000];
         each element of array A is an integer within the range [1..1,000,000,000].
 
-
-
+*/
 
         Python
         def solution(K, A):
@@ -4096,6 +4005,7 @@ that, given an integer K and a non-empty array A of N integers, returns the maxi
         # next one.
         if length >= K: count += 1; length = 0
         return count
+/**
         Max-Nonoverlapping-Segments
 
         Located on a line are N segments, numbered from 0 to N − 1, whose positions are given in arrays A and B. For each I (0 ≤ I < N) the position of segment I is from A[I] to B[I] (inclusive). The segments are sorted by their ends, which means that B[K] ≤ B[K + 1] for K such that 0 ≤ K < N − 1.
@@ -4133,9 +4043,7 @@ that, given two arrays A and B consisting of N integers, returns the size of a n
         each element of arrays A, B is an integer within the range [0..1,000,000,000];
         A[I] ≤ B[I], for each I (0 ≤ I < N);
         B[K] ≤ B[K + 1], for each K (0 ≤ K < N − 1).
-
-
-
+*/
 
 class Solution {
     public int solution(int[] A, int[] B) {
@@ -4154,6 +4062,7 @@ class Solution {
 return c;
 }
 }
+/**
         Binary-Gap
 
         A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
@@ -4171,8 +4080,7 @@ that, given a positive integer N, returns the length of its longest binary gap. 
         Write an efficient algorithm for the following assumptions:
 
         N is an integer within the range [1..2,147,483,647].
-
-
+*/
 
 public int solution(int N) {
         int temp = 0;
@@ -4189,7 +4097,7 @@ public int solution(int N) {
         }
         return temp;
         }
-        Number-Solitaire
+   /**     Number-Solitaire
 
         A game for one player is played on a board consisting of N consecutive squares, numbered from 0 to N − 1. There is a number written on each square. A non-empty array A of N integers contains the numbers written on the squares. Moreover, some squares can be marked during the game.
 
@@ -4247,9 +4155,7 @@ that, given a non-empty array A of N integers, returns the maximal result that c
 
         N is an integer within the range [2..100,000];
         each element of array A is an integer within the range [−10,000..10,000].
-
-
-
+*/
 
         #include
         #include
@@ -4269,6 +4175,7 @@ that, given a non-empty array A of N integers, returns the maximal result that c
         }
         return memo[len - 1];
         }
+/**
         Min-Abs-Sum
 
         For a given array A of N integers and a sequence S of N integers from the set {−1, 1}, we define val(A, S) as follows:
@@ -4333,9 +4240,7 @@ that, given a non-empty string S consisting of N characters, returns the length 
 
 
         In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
-
-
-
+*/
         C#
 public static int LongestPassword(string value)
         {
@@ -4389,6 +4294,7 @@ public static int LongestPassword(string value)
         return passwords.Where(x => x != null).Max(x => x.Length);
         }
 
+/**
         Flood-Depth
 
         You are helping a geologist friend investigate an area with mountain lakes. A recent heavy rainfall has flooded these lakes and their water levels have reached the highest possible point. Your friend is interested to know the maximum depth in the deepest part of these lakes.
@@ -4441,9 +4347,7 @@ that, given a non-empty array A consisting of N integers, returns the maximum de
 
         N is an integer within the range [1..100,000];
         each element of array A is an integer within the range [1..100,000,000].
-
-
-
+*/
 
         def solution(A):
         maxH = 0
@@ -4461,6 +4365,7 @@ that, given a non-empty array A consisting of N integers, returns the maximum de
         if d > maxD:
         maxD = d
         return maxD
+/**
         Slalom-Skiing
 
         You are a skier participating in a giant slalom. The slalom track is located on a ski slope, goes downhill and is fenced by barriers on both sides. The barriers are perpendicular to the starting line located at the top of the slope. There are N slalom gates on the track. Each gate is placed at a distinct distance from the starting line and from the barrier on the right-hand side (looking downhill).
@@ -4523,6 +4428,7 @@ that, given an array A consisting of N integers, describing the positions of the
         each element of array A is an integer within the range [1..1,000,000,000];
         the elements of A are all distinct.
 
+*/
 
 
 
@@ -4579,6 +4485,7 @@ that, given an array A consisting of N integers, describing the positions of the
         # The point in the original universe.
         multiverse.append(point)
         return LongestIncreasingSubsequence(multiverse)
+/**
         Dwarfs-Rafting
 
         A company of dwarfs is travelling across the New Zealand. On reaching the Clutha River the dwarfs need to get across, but recent storms have washed away the bridge. Luckily, a small ferry, in the form of a square raft, is operating.
@@ -4621,6 +4528,7 @@ that, given the size of the raft N and two strings S, T that describes the posit
 
         In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
+*/
 
 
         def solution(A):
@@ -4651,6 +4559,7 @@ that, given the size of the raft N and two strings S, T that describes the posit
         low = A[index]
         #print( index, front, low)
         return depth
+/**
         Tree-Height
 
         In this problem we consider binary trees, represented by pointer data structures.
@@ -4697,6 +4606,7 @@ class Tree {
         N is an integer within the range [1..1,000];
         the height of tree T (number of edges on the longest path from root to leaf) is within the range [0..500].
 
+*/
 
 
 
@@ -4709,6 +4619,7 @@ class Solution {
         return result;
     }
 }
+/**
 Str-Symmetry-Point
 
         Write a function:
@@ -4735,7 +4646,7 @@ that, given a string S, returns the index (counting from 0) of a character such 
 
         the length of S is within the range [0..2,000,000].
 
-
+*/
 
         def solution(S):
         sLen = len(S)
@@ -4753,7 +4664,7 @@ that, given a string S, returns the index (counting from 0) of a character such 
         begin += 1
         end -= 1
         return mid
-        Equi
+ /**       Equi
 
         This is a demo task.
 
@@ -4812,6 +4723,7 @@ that, given an array A consisting of N integers, returns any of its equilibrium 
         N is an integer within the range [0..100,000];
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
+*/
 
 
 
@@ -4827,7 +4739,7 @@ that, given an array A consisting of N integers, returns any of its equilibrium 
         else:
         # No equilibrium is found.
         return -1
-        Sql-Sum
+   /**     Sql-Sum
         tresc	SELECT SUM(v) FROM elements
         Array-Inversion-Count
 
@@ -4855,7 +4767,7 @@ class Solution { public int solution(int[] A); }
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
 
-
+*/
         def mergesort( aList, first, last ):
         ''' Modified merge sort algorithm.
         Record the inversion count during sort.
@@ -4918,7 +4830,7 @@ class Solution { public int solution(int[] A); }
         return merge_inver + left_inver + right_inver
         def solution(A):
         return mergesort( A * 1, 0, len(A)-1)
-        Odd-Occurrences-In-Array
+  /**      Odd-Occurrences-In-Array
 
 
 
@@ -4954,7 +4866,7 @@ that, given an array A consisting of N integers fulfilling the above conditions,
         all but one of the values in A occur an even number of times.
 
 
-
+*/
 public int solution(int[] A) {
         Arrays.sort(A);
         int i, j, count = 0;
@@ -4982,7 +4894,7 @@ public int solution(int[] A) {
         for (i=0; i return A[i];
         }
 
-        Cyclic-Rotation
+  /**      Cyclic-Rotation
 
         An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
 
@@ -5027,7 +4939,7 @@ that, given an array A consisting of N integers and an integer K, returns the ar
 
 
         In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
-
+*/
 
 
 public int[] solution(int[] A, int K) {
@@ -5057,6 +4969,7 @@ class Solution
         return newArray;
     }
 }
+/**
 Polygon-Concavity-Index
 
         An array A of points in a 2D plane is given. These points represent a polygon: every two consecutive points describe an edge of the polygon, and there is an edge connecting the last point and the first point in the array.
@@ -5136,6 +5049,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         the coordinates of each point in array A are integers within the range [−1,000,000,000..1,000,000,000];
         no two edges of the polygon A intersect, other than meeting at their endpoints;
         array A does not contain duplicate points.
+*/
 
 
 
@@ -5194,6 +5108,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         alphabet.discard(A[index])
         if len(alphabet) == 0:
         return index 	odpowiedz
+/**
         beta2010 (Number-Of-Disc-Intersections)
 
         We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
@@ -5233,13 +5148,14 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         each element of array A is an integer within the range [0..2,147,483,647].
 
 
+*/
 
 
 // you can also use imports, for example:
 // import java.util.*;
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
-        /* for each disc J in A w/ radius A[J], J *must* intersect with the previous A[J] discs
+        /** for each disc J in A w/ radius A[J], J *must* intersect with the previous A[J] discs
          * for disc J and K s.t. J < K, J intersects K iff J + A[J] >= K - A[K]
          * problem is when J + A[J] < K
          * need a way to know the number of discs prior to a position I that intersect w/ I
@@ -5290,8 +5206,10 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         }
         }
 
+/**
         gamma2011 (Count-Palindromic-Slices)
         tresc
+*/
         def palindrome_substring(str):
         ''' Input: string
         Attention: the input string will be extended. For example,
@@ -5350,6 +5268,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         return -1
         else:
         return count
+/**
         Delta2011 (Min-Abs-Sum)
 
         For a given array A of N integers and a sequence S of N integers from the set {−1, 1}, we define val(A, S) as follows:
@@ -5382,6 +5301,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         N is an integer within the range [0..20,000];
         each element of array A is an integer within the range [−100..100].
 
+*/
 
 
 
@@ -5514,6 +5434,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         # Find the median of the query results
         return findSingleArrayMedian(answer)
 
+/**
         sigma2012 (Stone-Wall)
 
         You are going to build a stone wall. The wall should be straight and N meters long, and its thickness should be constant; however, it should have different heights in different places. The height of the wall is specified by an array H of N positive integers. H[I] is the height of the wall from I to I+1 meters to the right of its left end. In particular, H[0] is the height of the wall's left end and H[N−1] is the height of the wall's right end.
@@ -5540,6 +5461,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         N is an integer within the range [1..100,000];
         each element of array H is an integer within the range [1..1,000,000,000].
 
+*/
 
 
         import java.util.ArrayList;
@@ -5592,8 +5514,9 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         }
         }
 
-        upsilon2012 (Cartesian-Sequence)
-        tresc 	class Cartesian_Tree():
+/**        upsilon2012 (Cartesian-Sequence)
+        tresc*/ 	
+class Cartesian_Tree():
         ''' The class to construct the Cartesian Tree
         '''
         class node(object):
@@ -5657,6 +5580,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         def solution(A):
         tree = Cartesian_Tree(A)
         return tree.heigth+1
+/**
         chi2012 (Cannonballs)
 
         A new kind of cannon is being tested. The cannon shoots cannonballs in a fixed direction. Each cannonball flies horizontally until it hits the ground, and then it rests there. Cannonballs are shot from different heights, so they hit the ground at different points.
@@ -5705,6 +5629,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         M and N are integers within the range [0..30,000];
         each element of arrays A, B is an integer within the range [0..1,000,000].
 
+*/
 
         def solution(A, B):
         to_fall = [-1] * (max(B) + 1) # Store where the ball should
@@ -5951,6 +5876,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         current = clock
         same_pairs += current_count * ( current_count - 1 ) /2
         return same_pairs
+/**
         boron2013 (Flags)
 
         A non-empty array A consisting of N integers is given.
@@ -6035,6 +5961,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         N is an integer within the range [1..400,000];
         each element of array A is an integer within the range [0..1,000,000,000].
 
+*/
 
         import java.util.*;
         class Solution {
@@ -6067,6 +5994,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         s--;}
         return 0;}
         }
+/**
         oxygenium2014 (Count-Bounded-Slices)
 
         An integer K and a non-empty array A consisting of N integers are given.
@@ -6117,6 +6045,7 @@ that, given a non-empty array A consisting of N elements describing a polygon, r
         K is an integer within the range [0..1,000,000,000];
         each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
 
+*/
 
         defboundedSlicesGolden(K, A):2N = len(A)34maxQ = [0]*(N + 1)5posmaxQ = [0]*(N + 1)6minQ = [0]*(N + 1)7posminQ = [0]*(N + 1)89firstMax, lastMax = 0, -110firstMin, lastMin = 0, -111j, result = 0, 01213foriinxrange(N):14while(j < N):15# added new maximum element16while(lastMax >= firstMaxandmaxQ[lastMax] <= A[j]):17lastMax -= 118lastMax += 119maxQ[lastMax] = A[j]20posmaxQ[lastMax] = j212
         22# added new minimum element23while(lastMin >= firstMinandminQ[lastMin] >= A[j]):24lastMin -= 125lastMin += 126minQ[lastMin] = A[j]27posminQ[lastMin] = j2829if(maxQ[firstMax] - minQ[firstMin] <= K):30j += 131else:32break33result += (j - i)34ifresult >= maxINT:35returnmaxINT36ifposminQ[firstMin] == i:37firstMin += 138ifposmaxQ[firstMax] == i:39firstMax += 140returnresul
